@@ -39,9 +39,9 @@ val middleName = "Smith";
 val lastName = "Doe";
 
 var c = SpanCollection(this)
-        c.addColored(firstName, R.color.purple_200)
-        c.addStyled(middleName, SpanString.STRIKE_THROUGH)
-        c.addBoth(lastName, R.color.purple_700, SpanString.BOLD)
+        c.addColored(firstName, R.color.red)
+        c.addStyled(middleName, SpanString.BOLD)
+        c.addBoth(lastName, R.color.red, SpanString.ITALIC)
 
 textView.text = c.print();
 ```
@@ -52,9 +52,9 @@ String middleName = "Smith";
 String lastName = "Doe";
 
 SpanCollection c = new SpanCollection(this);
-        c.addColored(firstName, R.color.purple_200);
-        c.addStyled(middleName, SpanString.STRIKE_THROUGH);
-        c.addBoth(lastName, R.color.purple_700, SpanString.BOLD);
+        c.addColored(firstName, R.color.red);
+        c.addStyled(middleName, SpanString.BOLD);
+        c.addBoth(lastName, R.red, SpanString.ITALIC);
 
 textView.setText(c.print());
 ```
