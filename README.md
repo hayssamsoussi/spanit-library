@@ -19,16 +19,15 @@ dependencies {
 ```
 ## Usage
 #### Step 1: Match your target text(s)
-| Method                       | Description                                     |
+| Style                       | Use                                     |
 | -------------                | ----------------------------------------------- |
-| `SpanString.BOLD`                | match first occurrence                          |
-| `SpanString.ITALIC`                 | match last occurrence                           |
-| `SpanString.BOLD_ITALIC`                  | match all occurrences                           |
-| `SpanString.REGULAR`                      | match whole text                                |
-| `SpanString.NEW_LINE`   | match all occurrences with specified prefix(s)  |
-| `SpanString.UNDER_LINE`             | match text at specified position                |
-| `SpanString.STRIKE_THROUGH`             | match all texts at specified positions          |
-| `between(startText:endText)` | match text between two texts                    |
+| `SpanString.BOLD`                | addStyled(text, SpanString.BOLD)                         |
+| `SpanString.ITALIC`                 | addStyled(text, SpanString.ITALIC)                         |
+| `SpanString.BOLD & Purple`              | addBoth(text, R.color.purple, SpanString.BOLD)                          |
+| `Red`                      | addColored(text, R.color.red)                                |
+| `SpanString.NEW_LINE`   | addStyled(text, SpanString.NEW_LINE)    |
+| `SpanString.UNDER_LINE`             |  addStyled(text, SpanString.UNDER_LINE)                |
+| `SpanString.STRIKE_THROUGH`             | addStyled(text, SpanString.STRIKE_THROUGH)           |
 
 #### Step 2: Apply style(s)
 
