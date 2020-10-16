@@ -39,10 +39,10 @@ class SpanText(context: Context) {
         if (color != null) { spannableStringBuilder.setSpan(ForegroundColorSpan(ContextCompat.getColor(context, color)), start, spannableStringBuilder.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE) }
         if (type != null) {
             when (type) {
-                1 -> spannableStringBuilder!!.setSpan(StyleSpan(Typeface.BOLD), start, spannableStringBuilder.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-                2 -> spannableStringBuilder!!.setSpan(StyleSpan(Typeface.NORMAL), start, spannableStringBuilder.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-                3 -> spannableStringBuilder!!.setSpan(StyleSpan(Typeface.ITALIC), start, spannableStringBuilder.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-                4 -> spannableStringBuilder!!.setSpan(StyleSpan(Typeface.BOLD_ITALIC), start, spannableStringBuilder.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+                1 -> spannableStringBuilder.setSpan(StyleSpan(Typeface.BOLD), start, spannableStringBuilder.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+                2 -> spannableStringBuilder.setSpan(StyleSpan(Typeface.NORMAL), start, spannableStringBuilder.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+                3 -> spannableStringBuilder.setSpan(StyleSpan(Typeface.ITALIC), start, spannableStringBuilder.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+                4 -> spannableStringBuilder.setSpan(StyleSpan(Typeface.BOLD_ITALIC), start, spannableStringBuilder.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
                 5 -> spannableStringBuilder.append("\n")
                 6 -> spannableStringBuilder.setSpan(UnderlineSpan(), start, spannableStringBuilder.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
                 7 -> spannableStringBuilder.setSpan(StrikethroughSpan(), start, spannableStringBuilder.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
