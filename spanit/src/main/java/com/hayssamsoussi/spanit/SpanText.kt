@@ -1,4 +1,4 @@
-package com.hayssam.myapplication
+package com.hayssamsoussi.spanit
 
 import android.content.Context
 import android.graphics.Typeface
@@ -11,25 +11,25 @@ import android.text.style.UnderlineSpan
 import androidx.core.content.ContextCompat
 import java.util.*
 
-class SpanCollection(context: Context) {
-    private var testList: MutableList<SpanString> = ArrayList()
+class SpanText(context: Context) {
+    private var spansList: MutableList<SpanString> = ArrayList()
     private var spannableStringBuilder: SpannableStringBuilder = SpannableStringBuilder()
     private var context: Context = context
 
-    fun addColored(text: String?, color: Int) {
-        testList.add(SpanString(text, null, color))
+    fun addColoredText(text: String?, color: Int) {
+        spansList.add(SpanString(text, null, color))
     }
 
-    fun addStyled(text: String?, type: Int) {
-        testList.add(SpanString(text, type, null))
+    fun addStyledText(text: String?, type: Int) {
+        spansList.add(SpanString(text, type, null))
     }
 
-    fun addBoth(text: String?, color: Int, type: Int) {
-        testList.add(SpanString(text, type, color))
+    fun addColoredStyledText(text: String?, color: Int, type: Int) {
+        spansList.add(SpanString(text, type, color))
     }
 
-    fun print(): SpannableStringBuilder? {
-        testList.forEach { addSpan(it.text, it.color, it.type) }
+    fun toText(): SpannableStringBuilder? {
+        spansList.forEach { addSpan(it.text, it.color, it.type) }
         return spannableStringBuilder
     }
 
