@@ -1,4 +1,4 @@
-package com.olive.myapplication
+package com.hayssam.myapplication
 
 class SpanString(var text: String?, var type: Int?, var color: Int?) {
 
