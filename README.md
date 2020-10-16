@@ -21,13 +21,13 @@ dependencies {
 #### Step 1: Match your target text(s)
 | Method                       | Description                                     |
 | -------------                | ----------------------------------------------- |
-| `first(text)`                | match first occurrence                          |
-| `last(text)`                 | match last occurrence                           |
-| `all(text)`                  | match all occurrences                           |
-| `all()`                      | match whole text                                |
-| `allStartWith(prefixs...)`   | match all occurrences with specified prefix(s)  |
-| `range(from:to)`             | match text at specified position                |
-| `ranges(ranges)`             | match all texts at specified positions          |
+| `SpanString.BOLD`                | match first occurrence                          |
+| `SpanString.ITALIC`                 | match last occurrence                           |
+| `SpanString.BOLD_ITALIC`                  | match all occurrences                           |
+| `SpanString.REGULAR`                      | match whole text                                |
+| `SpanString.NEW_LINE`   | match all occurrences with specified prefix(s)  |
+| `SpanString.UNDER_LINE`             | match text at specified position                |
+| `SpanString.STRIKE_THROUGH`             | match all texts at specified positions          |
 | `between(startText:endText)` | match text between two texts                    |
 
 #### Step 2: Apply style(s)
@@ -50,7 +50,7 @@ textView.setText(c.print());
 
 ## License
 ```
-Copyright 2016 Jay Chang
+Copyright 2020 Hayssam Soussi
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
