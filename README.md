@@ -21,13 +21,13 @@ dependencies {
 #### Step 1: Match your target text(s)
 | Style                       | Use                                     |
 | -------------                | ----------------------------------------------- |
-| `SpanString.BOLD`                | addStyled(text, SpanString.BOLD)                         |
-| `SpanString.ITALIC`                 | addStyled(text, SpanString.ITALIC)                         |
-| `SpanString.BOLD & Purple`              | addBoth(text, R.color.purple, SpanString.BOLD)                          |
-| `SpanString.NEW_LINE`   | addStyled(text, SpanString.NEW_LINE)    |
-| `SpanString.UNDER_LINE`             |  addStyled(text, SpanString.UNDER_LINE)                |
-| `SpanString.STRIKE_THROUGH`             | addStyled(text, SpanString.STRIKE_THROUGH)           |
-| `Red`                      | addColored(text, R.color.red)                                |
+| `SpanString.BOLD`                | addStyledText(text, SpanString.BOLD)                         |
+| `SpanString.ITALIC`                 | addStyledText(text, SpanString.ITALIC)                         |
+| `SpanString.BOLD & Purple`              | addColoredStyledText(text, R.color.purple, SpanString.BOLD)                          |
+| `SpanString.NEW_LINE`   | addStyledText(text, SpanString.NEW_LINE)    |
+| `SpanString.UNDER_LINE`             |  addStyledText(text, SpanString.UNDER_LINE)                |
+| `SpanString.STRIKE_THROUGH`             | addStyledText(text, SpanString.STRIKE_THROUGH)           |
+| `Red`                      | addColoredText(text, R.color.red)                                |
 
 #### Step 2: Apply style(s)
 
@@ -39,11 +39,11 @@ val middleName = "Smith";
 val lastName = "Doe";
 
 var c = SpanCollection(this)
-        c.addColored(firstName, R.color.red)
-        c.addStyled(middleName, SpanString.BOLD)
-        c.addBoth(lastName, R.color.red, SpanString.ITALIC)
+        c.addColoredText(firstName, R.color.red)
+        c.addStyledText(middleName, SpanString.BOLD)
+        c.addColoredStyledText(lastName, R.color.red, SpanString.ITALIC)
 
-textView.text = c.print();
+textView.text = c.toText();
 ```
 #### Java
 ```java
@@ -52,11 +52,11 @@ String middleName = "Smith";
 String lastName = "Doe";
 
 SpanCollection c = new SpanCollection(this);
-        c.addColored(firstName, R.color.red);
-        c.addStyled(middleName, SpanString.BOLD);
-        c.addBoth(lastName, R.red, SpanString.ITALIC);
+        c.addColoredText(firstName, R.color.red);
+        c.addStyledText(middleName, SpanString.BOLD);
+        c.addColoredStyledText(lastName, R.red, SpanString.ITALIC);
 
-textView.setText(c.print());
+textView.setText(c.toText());
 ```
 
 ## License
