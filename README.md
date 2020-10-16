@@ -32,17 +32,29 @@ dependencies {
 #### Step 2: Apply style(s)
 
 ## Example
+#### Kotlin
 ```kotlin
-TextView textView = (TextView) findViewById(R.id.textView);
-
-String firstName = "John";
-String middleName = "Smith";
-String lastName = "Doe";
+val firstName = "John";
+val middleName = "Smith";
+val lastName = "Doe";
 
 var c = SpanCollection(this)
         c.addColored(firstName, R.color.purple_200)
         c.addStyled(middleName, SpanString.STRIKE_THROUGH)
         c.addBoth(lastName, R.color.purple_700, SpanString.BOLD)
+
+textView.text = c.print();
+```
+#### Java
+```java
+String firstName = "John";
+String middleName = "Smith";
+String lastName = "Doe";
+
+SpanCollection c = new SpanCollection(this);
+        c.addColored(firstName, R.color.purple_200);
+        c.addStyled(middleName, SpanString.STRIKE_THROUGH);
+        c.addBoth(lastName, R.color.purple_700, SpanString.BOLD);
 
 textView.setText(c.print());
 ```
