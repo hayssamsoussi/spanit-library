@@ -13,9 +13,11 @@ This libary aims to simplify the creation of spannable string.
 In your app level build.gradle :
 
 ```java
-dependencies {
-    implementation 'com.github.hayssamsoussi:spanit-library:1.0.2'
+repositories {
+        maven { url 'https://www.jitpack.io' }
 }
+    
+implementation 'com.github.hayssamsoussi:spanit-library:1.0.2'
 ```
 ## Usage
 #### Step 1: Match your target text(s)
